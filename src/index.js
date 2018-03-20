@@ -1,9 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-setInterval(function(){
+// function Cartoon(props){
+//   return <h1>Hello, {props.name}</h1>
+// }
+
+class Cartoon extends React.Component{
+  render(){
+    return <h1>Hello, {this.props.name}</h1>
+  }
+}
   ReactDOM.render(
-      <h2>Time now: {new Date().toLocaleTimeString()}</h2>,
+      <Cartoon name='pikachu'/>,
       document.getElementById('root')
   );
-},1000)
